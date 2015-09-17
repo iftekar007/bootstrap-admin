@@ -1,4 +1,4 @@
-name=bootstrap-admin
+name=bootstrap_admin
 description=This is the backend theme of the project Bootstrap-admin
 core=7.x
 engine=phptemplate
@@ -24,11 +24,12 @@ regions[footer]=Footer
 
 features[]=logo
 features[]=name
+features[]=navigation
 features[]=slogan
 features[]=favicon
 features[]=node_user_picture
 features[]=main_menu
-features[]=decondary_menu
+features[]=secondary_menu
 
 
 

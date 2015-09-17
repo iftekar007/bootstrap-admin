@@ -10,10 +10,13 @@
 
 
 
+
+
     ?>
 
 
     <header class="main-header">
+
 
         <!-- Logo -->
         <a href="index2.html" class="logo">
@@ -211,6 +214,20 @@
             <!-- /.search form -->
 
             <!-- Sidebar Menu -->
+
+
+            <?php
+
+            if($page['left_siderbar']){
+                //print_r(menu_tree('navigation'));
+                ?>
+                <div> <?php print theme('links', array('links' => menu_navigation_links('navigation'), 'attributes' => array('class'=> array('links', 'sidebar-menu')) )); ?></div>
+            <?php
+            }
+            ?>
+
+
+
             <ul class="sidebar-menu">
                 <li class="header">HEADER</li>
                 <!-- Optionally, you can add icons to the links -->
