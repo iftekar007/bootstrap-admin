@@ -1,4 +1,4 @@
-name=bootstrap_admin
+name=admin
 description=This is the backend theme of the project Bootstrap-admin
 core=7.x
 engine=phptemplate
