@@ -309,7 +309,70 @@
 
 <?php
 
-print render($page['content']); ?>
+print render($page['content']);
+
+
+$menu=(menu_tree_all_data('navigation'));
+function display_menu_tree($arr){
+
+    foreach($arr as $key=>$value){
+
+        for($i=1;$i<=$value['link']['depth'];$i++){
+            echo "----";
+        }
+        echo $value['link']['link_title'];
+        echo "<br>";
+
+        if(count($value['below']))
+        {
+            display_menu_tree($value['below']);
+        }
+
+    }
+
+}
+display_menu_tree($menu);
+//print_r($menu);
+/*foreach($menu as  $i=>$v){
+
+    var_dump($v);
+
+    echo "<br/>";
+    echo "<br/>";
+    echo "<br/>";
+    echo "<br/>";
+
+    foreach($v as $v1){
+
+        echo "<br/>";
+        echo "<br/>";
+        echo "<br/>";
+        var_dump($v1);
+        var_dump($v1['link']['link_path']);
+        var_dump($v1['link']['link_title']);
+        var_dump($v1['link']['has_children']);
+        var_dump($v1['link']['tab_root']);
+        var_dump($v1['link']['href']);
+        var_dump(count($v1['link']));
+        echo "<br/>";
+        echo "<br/>";
+        echo "<br/>";
+    }
+
+    var_dump($v['link']['link_path']);
+    var_dump($v['link']['link_title']);
+    var_dump($v['link']['has_children']);
+    var_dump($v['link']['tab_root']);
+    var_dump($v['link']['href']);
+    var_dump(count($v['link']));
+    var_dump(($i));
+
+    echo "<br/>";
+    echo "<br/>";
+    echo "<br/>";
+}*/
+
+?>
 
     </section><!-- /.content -->
 </div>

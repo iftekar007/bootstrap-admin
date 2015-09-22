@@ -13,8 +13,8 @@ function admin_preprocess_user_login_block(&$variables) {
 
 
 function admin_form_element($variables) {
-    echo 89;
-    exit;
+    //echo 89;
+    //exit;
     $output = '';
     $output = $variables['element']['#children'];
     // echo strlen($variables['element']['#name']);
